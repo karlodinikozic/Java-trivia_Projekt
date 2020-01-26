@@ -10,7 +10,7 @@
 <VBox fx:id="firstBox" maxHeight="600.0" maxWidth="900.0" minHeight="600.0"
       minWidth="-Infinity" prefHeight="600.0"
       prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="sample.SceenControlers.Controller">
+      fx:controller="sample.SceneControlers.Controller">
    <children>
       <HBox alignment="CENTER" prefHeight="62.0" prefWidth="900.0">
          <children>

@@ -2,11 +2,20 @@ package sample.SceneControlers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
 
 public class PlayersEnter {
+
+    @FXML
+    VBox firstBox;
+
     @FXML
     Label errorLab;
 
@@ -32,7 +41,17 @@ public class PlayersEnter {
             player2.setStyle("-fx-border-color: red;-fx-background-color: rgba(255,0,0,0.1)");
             errorLab.setText("Please enter Player 2 name");
 
-        }
+        }else{
+           Stage currentStage =  (Stage) firstBox.getScene().getWindow();
+           try{
+               Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Scenes/Rounds.fxml"));
+               Scene newScene = new Scene(root);
+               currentStage.setScene(newScene);
+           }catch (Exception err){
+               System.out.println(err);
+           }
+
+       }
 
 
 
