@@ -9,13 +9,7 @@ public class Rounds {
     @FXML
     PieChart wheel;
 
-    ObservableList<PieChart.Data> pieChartData =
-            FXCollections.observableArrayList(
-                    new PieChart.Data("Geography", 25),
-                    new PieChart.Data("Science", 25),
-                    new PieChart.Data("History", 25),
-                    new PieChart.Data("Sport", 10),
-                    new PieChart.Data("Crown", 10),
+
 
 
 }

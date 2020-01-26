@@ -36,6 +36,15 @@ public class PlayersEnter {
         player2.setStyle("-fx-border-color: none");
         errorLab.setText("");
 
+        if(player1.getText().length()!=0){
+            Player1.setName(player1.getText());
+        }
+
+        if(player2.getText().length()!=0){
+            Player2.setName(player2.getText());
+        }
+
+        System.out.println(Player1.getName() + Player2.getName());
 
        if(player1.getText().length()==0){
            player1.setStyle("-fx-border-color: red;-fx-background-color: rgba(255,0,0,0.1)");
