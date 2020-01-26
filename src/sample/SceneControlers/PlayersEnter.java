@@ -36,13 +36,6 @@ public class PlayersEnter {
         player2.setStyle("-fx-border-color: none");
         errorLab.setText("");
 
-        if(player1.getText().length()!=0){
-            Player1.setName(player1.getText());
-        }
-
-        if(player2.getText().length()!=0){
-            Player2.setName(player2.getText());
-        }
 
         System.out.println(Player1.getName() + Player2.getName());
 
@@ -56,6 +49,8 @@ public class PlayersEnter {
             errorLab.setText("Please enter Player 2 name");
 
         }else{
+           Player1.setName(player1.getText());
+           Player2.setName(player2.getText());
            Stage currentStage =  (Stage) firstBox.getScene().getWindow();
            try{
                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Scenes/Rounds.fxml"));

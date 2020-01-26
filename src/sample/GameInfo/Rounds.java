@@ -5,37 +5,31 @@ import java.util.ArrayList;
 public class Rounds {
 
 
-    private int currentPlayerPoints=0;
-    private int currentRound;
-    private boolean is1Player;
+    private static int currentPlayerPoints=0;
+    private static int currentRound;
+    private static boolean is1Player = true;
 
 
 
-    public Rounds(Object player) {
-        if(player.getClass()== Player1.class ){
-            is1Player=true;
-        }else {
-            is1Player=false;
-        }
-    }
 
-    public int getCurrentPlayerPoints() {
+
+    public static int  getCurrentPlayerPoints() {
         return currentPlayerPoints;
     }
 
-    public void setCurrentPlayerPoints(int currentPlayerPoints) {
-        this.currentPlayerPoints = currentPlayerPoints;
+    public static void setCurrentPlayerPoints(int currentPlayerPoints) {
+        currentPlayerPoints = currentPlayerPoints;
     }
 
-    public int getCurrentRound() {
+    public static int getCurrentRound() {
         return currentRound;
     }
 
-    public void setCurrentRound(int currentRound) {
-        this.currentRound = currentRound;
+    public static  void setCurrentRound(int currentRound) {
+        currentRound = currentRound;
     }
 
-    public ArrayList getCurrentPlayerCategories(){
+    public static ArrayList getCurrentPlayerCategories(){
         ArrayList<Boolean> categories = new ArrayList<Boolean>();
         if(is1Player){
             categories.add(Player1.getHasGeography());

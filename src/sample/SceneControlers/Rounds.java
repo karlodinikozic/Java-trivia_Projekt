@@ -5,6 +5,9 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.chart.PieChart;
 import javafx.stage.Stage;
 
@@ -43,26 +46,46 @@ public class Rounds {
         System.out.println(Math.ceil(angle%360));
         int categoryAngle =  (int)(angle % 360);
         if(categoryAngle<=57 || categoryAngle>345){
-            System.out.println("Plava");
+            NewQuestion("Crown");
         }
         else if(categoryAngle<=129 &&categoryAngle>57){
-            System.out.println("zelena");
+            NewQuestion("Geography");
         }
         else if(categoryAngle<=201 &&categoryAngle>129){
-            System.out.println("Naranđasta");
+            NewQuestion("Science");
         }
         else if(categoryAngle<=273 &&categoryAngle>201){
-            System.out.println("Crvena");
+            NewQuestion("History");
         }
         else if(categoryAngle<=345 &&categoryAngle>273){
-            System.out.println("Purple");
+            NewQuestion("Sport");
         }
 
 
     }
 
+    private  void NewQuestion (String category){
+        //TODO IF CATEGORY CROWN
+        //CATEGORY CHOOSER
+
+
+        Stage currentStage =  (Stage) wheel.getScene().getWindow();
+        try{
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Scenes/Question.fxml"));
+            Scene newScene = new Scene(root);
+            Question.setCategory(category);
+            currentStage.setScene(newScene);
+        }catch (Exception err){
+            System.out.println(err);
+        }
+    }
+
    @FXML
    public void initialize() {
+       sample.GameInfo.Rounds.setCurrentRound(
+               sample.GameInfo.Rounds.getCurrentRound()+1
+       );
+
        ObservableList<PieChart.Data> pieChartData =
                FXCollections.observableArrayList(
                        new PieChart.Data("", 72),
