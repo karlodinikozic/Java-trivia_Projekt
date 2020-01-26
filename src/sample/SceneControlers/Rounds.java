@@ -1,5 +1,6 @@
 package sample.SceneControlers;
 
+
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -9,14 +10,16 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.chart.PieChart;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-import javax.swing.*;
+import javax.swing.Timer;
 import java.awt.event.ActionListener;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Rounds {
-
+    @FXML
+    VBox firstBox;
 
     @FXML
     PieChart wheel;
@@ -36,11 +39,13 @@ public class Rounds {
             counter--;
             if(counter==0){
                 timer.stop();
+
                 counter = 1000;
                 whichCategory();
             }
         }
     };
+
 
     private void whichCategory(){
         System.out.println(Math.ceil(angle%360));
@@ -67,13 +72,15 @@ public class Rounds {
     private  void NewQuestion (String category){
         //TODO IF CATEGORY CROWN
         //CATEGORY CHOOSER
-
-
-        Stage currentStage =  (Stage) wheel.getScene().getWindow();
+        System.out.println(category);
+        Stage currentStage =  (Stage) firstBox.getScene().getWindow();
+        System.out.println(currentStage);
         try{
             Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Scenes/Question.fxml"));
+
             Scene newScene = new Scene(root);
             Question.setCategory(category);
+
             currentStage.setScene(newScene);
         }catch (Exception err){
             System.out.println(err);
@@ -110,7 +117,8 @@ public class Rounds {
         counter= ThreadLocalRandom.current().nextInt(1000, 2000 + 1);;
         speed = 4;
         timer = new Timer(1,spin);
-       timer.start();
+        timer.start();
         //TODO disable button
+        //whichCategory();
     }
 }

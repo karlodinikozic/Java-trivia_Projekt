@@ -37,7 +37,7 @@ public class PlayersEnter {
         errorLab.setText("");
 
 
-        System.out.println(Player1.getName() + Player2.getName());
+
 
        if(player1.getText().length()==0){
            player1.setStyle("-fx-border-color: red;-fx-background-color: rgba(255,0,0,0.1)");
