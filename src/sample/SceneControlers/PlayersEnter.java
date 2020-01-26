@@ -4,6 +4,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import sample.GameInfo.Player1;
+import sample.GameInfo.Player2;
 
 
 public class PlayersEnter {

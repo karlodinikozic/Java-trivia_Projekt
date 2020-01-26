@@ -5,6 +5,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import sample.GameInfo.Player1;
+import sample.GameInfo.Player2;
+import sample.GameInfo.Rounds;
+
+import java.util.ArrayList;
 
 public class Main extends Application {
 
@@ -14,10 +19,19 @@ public class Main extends Application {
         primaryStage.setTitle("Hello World");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
+
+
+
+
+
     }
 
 
     public static void main(String[] args) {
+
+
+
+
         launch(args);
     }
 }
