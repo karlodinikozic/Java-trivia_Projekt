@@ -61,7 +61,7 @@ public class Rounds {
         Stage currentStage =  (Stage) firstBox.getScene().getWindow();
         Question.setCategory(category);
 
-        Stage currentStage =  (Stage) firstBox.getScene().getWindow();
+       
 
         System.out.println(category);
 

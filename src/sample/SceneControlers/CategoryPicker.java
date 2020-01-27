@@ -25,7 +25,7 @@ public class CategoryPicker {
         Stage currentStage =  (Stage) firstBox.getScene().getWindow();
         try{
 
-            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Scenes/CategoryPicker.fxml"));
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Scenes/Question.fxml"));
             Scene newScene = new Scene(root);
             newScene.getStylesheets().add("sample/StyleSheets/styles.css");
             currentStage.setScene(newScene);
