@@ -1,7 +1,7 @@
 package sample.SceneControlers;
 
 
-import javafx.animation.Animation;
+
 import javafx.animation.RotateTransition;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -19,7 +19,8 @@ import javafx.util.Duration;
 import sample.GameInfo.Player1;
 import sample.GameInfo.Player2;
 
-import java.beans.Expression;
+
+import java.security.SecureRandom;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Rounds {
@@ -54,6 +55,10 @@ public class Rounds {
 
     @FXML
     Label cPP;
+
+    @FXML
+    Label RoundCounter;
+
 
 
 
@@ -138,35 +143,48 @@ public class Rounds {
    public void initialize() {
 
 
-
        sample.GameInfo.Rounds.setCurrentRound(
                sample.GameInfo.Rounds.getCurrentRound()+1
        );
        sample.GameInfo.Rounds.setIsCrownQuestion(false);
+       String helpstr = "Round "+sample.GameInfo.Rounds.getCurrentRound()+"";
+       System.out.println(helpstr);
+       RoundCounter.setText(helpstr);
 
         //Init categories and names
        //P1
        p1Name.setText(Player1.getName());
-       if(Player1.getHasGeography()){p1Geo.setText("Geography: 1");}
-       if(Player1.getHasScience()){p1Sci.setText("Science: 1");}
-       if(Player1.getHasSport()){p1Spo.setText("Sport: 1");}
-       if(Player1.getHasHistory()){p1His.setText("History: 1");}
+       if(Player1.getHasGeography()){p1Geo.setText("Geography: 1");
+       p1Geo.setStyle("-fx-background-color: #2ab3ff;");
+       }
+       if(Player1.getHasScience()){p1Sci.setText("Science: 1");
+           p1Sci.setStyle("-fx-background-color: #16ff41;");}
+       if(Player1.getHasSport()){p1Spo.setText("Sport: 1");
+           p1Spo.setStyle("-fx-background-color: #ff8f17;");}
+       if(Player1.getHasHistory()){p1His.setText("History: 1");
+           p1His.setStyle("-fx-background-color: #ffeb59;");}
        //P2
        p2Name.setText(Player2.getName());
-       if(Player2.getHasGeography()){p2Geo.setText("Geography: 1");}
-       if(Player2.getHasScience()){p2Sci.setText("Science: 1");}
-       if(Player2.getHasSport()){p2Spo.setText("Sport: 1");}
-       if(Player2.getHasHistory()){p2His.setText("History: 1");}
+       if(Player2.getHasGeography()){p2Geo.setText("Geography: 1");
+           p2Geo.setStyle("-fx-background-color: #2ab3ff;");}
+       if(Player2.getHasScience()){p2Sci.setText("Science: 1");
+           p2Sci.setStyle("-fx-background-color: #16ff41;");
+          }
+       if(Player2.getHasSport()){p2Spo.setText("Sport: 1");
+           p2Spo.setStyle("-fx-background-color: #ff8f17;");
+       }
+       if(Player2.getHasHistory()){p2His.setText("History: 1");
+           p2His.setStyle("-fx-background-color: #ffeb59;");}
 
 
         if(sample.GameInfo.Rounds.getIs1Player()){
             System.out.println("player has =" +sample.GameInfo.Rounds.getCurrentPlayerPoints());
             cPP.setText(Player1.getName() + " has "
-                    + sample.GameInfo.Rounds.getCurrentPlayerPoints() + " /4");
+                    + sample.GameInfo.Rounds.getCurrentPlayerPoints() + " /4 points");
         }
         else{
             cPP.setText(Player2.getName() + " has "
-                    + sample.GameInfo.Rounds.getCurrentPlayerPoints() + " /4");
+                    + sample.GameInfo.Rounds.getCurrentPlayerPoints() + " /4 points");
         }
 
 

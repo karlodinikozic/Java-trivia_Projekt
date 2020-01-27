@@ -16,7 +16,7 @@
          <top>
              <HBox alignment="CENTER" prefHeight="62.0" prefWidth="900.0" BorderPane.alignment="CENTER">
                  <children>
-                     <Label text="Trivia Crack">
+                     <Label fx:id="RoundCounter">
                          <font>
                              <Font size="24.0" />
                          </font>

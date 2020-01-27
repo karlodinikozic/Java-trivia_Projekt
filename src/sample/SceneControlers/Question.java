@@ -53,21 +53,31 @@ public class Question {
 
     @FXML
     public void initialize()  {
+
+
+
         String fileName="";
         questions=new ArrayList<String[]>();
         nameCategory.setText(category);
         switch (category.toLowerCase()){
             case "geography":
                 fileName="GeographyQuestions.txt";
+                firstBox.setStyle("-fx-background-color: rgba(42,179,255,0.5)");
+
                 break;
             case "science":
                 fileName="ScienceQuestions.txt";
+                firstBox.setStyle("-fx-background-color: rgba(22,255,65,0.5)");
+
                 break;
             case "sport":
                 fileName="SportQuestions.txt";
+                firstBox.setStyle("-fx-background-color: rgba(255,143,23,0.5);");
+
                 break;
             case "history":
                 fileName="HistoryQuestions.txt";
+                firstBox.setStyle("-fx-background-color: rgba(255,235,89,0.5);");
                 break;
         }
 
@@ -211,12 +221,12 @@ public class Question {
             if(helparray.size() == 4) {
                 Stage currentStage =  (Stage) firstBox.getScene().getWindow();
                try{
-                   System.out.println("uša");
+
                    Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Scenes/Winner.fxml"));
-                   System.out.println("uša");
+
                    Scene newScene = new Scene(root);
                    newScene.getStylesheets().add("sample/StyleSheets/styles.css");
-                   System.out.println("uša");
+
                    currentStage.setScene(newScene);
 
                }catch (Exception err){
