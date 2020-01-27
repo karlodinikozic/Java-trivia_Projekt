@@ -59,14 +59,14 @@ public class Rounds {
 
     @FXML
     PieChart wheel;
-    int angle = 1000;
+    int angle = 345;
 
     RotateTransition rotateTransition = new RotateTransition();
 
 
 
     private void whichCategory(int angle){
-        System.out.println(Math.ceil(angle%360));
+
         int categoryAngle =  (int)(angle % 360);
         if(categoryAngle<=57 || categoryAngle>345){
             NewQuestion("Crown");
@@ -150,6 +150,7 @@ public class Rounds {
 
 
         if(sample.GameInfo.Rounds.getIs1Player()){
+            System.out.println("player has =" +sample.GameInfo.Rounds.getCurrentPlayerPoints());
             cPP.setText(Player1.getName() + " has "
                     + sample.GameInfo.Rounds.getCurrentPlayerPoints() + " /4");
         }

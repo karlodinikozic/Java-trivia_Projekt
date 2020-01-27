@@ -110,9 +110,6 @@ public class Question {
         Collections.shuffle(answer);
 
 
-        for(String i : answer){
-            System.out.println(i);
-        }
 
         TextAnswer1.setText(answer.get(0).toString());
         TextAnswer2.setText(answer.get(1).toString());
@@ -128,19 +125,37 @@ public class Question {
         if(answer.equals(correctAnswer)){
             int help  = Rounds.getCurrentPlayerPoints()+1;
             Rounds.setCurrentPlayerPoints(help);
-            System.out.println(Rounds.getCurrentPlayerPoints());
+
             ((Button)(actionEvent.getTarget()))
                    .setStyle("-fx-background-color: rgba(0,255,0,0.1);-fx-border-color: green");
 
-        }
-        else{
+        } else{
+
             Rounds.setCurrentPlayerPoints(0);
             Rounds.setIs1Player(!Rounds.getIs1Player());
             ((Button)(actionEvent.getTarget()))
                     .setStyle("-fx-background-color: rgba(255,0,0,0.1);-fx-border-color: red");
         }
+        if(Rounds.getCurrentPlayerPoints()==4){
 
-        if(Rounds.getIsCrownQuestion() || Rounds.getCurrentPlayerPoints()==4) {
+            Stage currentStage =  (Stage) firstBox.getScene().getWindow();
+
+
+                try{
+                    Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Scenes/CategoryPicker.fxml"));
+                    Scene newScene = new Scene(root);
+                    newScene.getStylesheets().add("sample/StyleSheets/styles.css");
+                    currentStage.setScene(newScene);
+
+                }catch (Exception err){
+                    System.out.println(err);
+                }
+
+        }
+
+
+        if(Rounds.getIsCrownQuestion() ) {
+
             Rounds.setCurrentPlayerPoints(0);
             Rounds.setIsCrownQuestion(false);
 
@@ -187,14 +202,16 @@ public class Question {
                     .filter(val -> val.equals(true))
                     .collect(Collectors.toList());
 
-
-            Stage currentStage =  (Stage) firstBox.getScene().getWindow();
+ 
             if(helparray.size() == 4) {
-
+                Stage currentStage =  (Stage) firstBox.getScene().getWindow();
                try{
+                   System.out.println("uša");
                    Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Scenes/Winner.fxml"));
+                   System.out.println("uša");
                    Scene newScene = new Scene(root);
                    newScene.getStylesheets().add("sample/StyleSheets/styles.css");
+                   System.out.println("uša");
                    currentStage.setScene(newScene);
 
                }catch (Exception err){
@@ -203,7 +220,7 @@ public class Question {
             }
 
 
-
+        Stage currentStage =  (Stage) firstBox.getScene().getWindow();
             try{
                 Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Scenes/Rounds.fxml"));
                 Scene newScene = new Scene(root);

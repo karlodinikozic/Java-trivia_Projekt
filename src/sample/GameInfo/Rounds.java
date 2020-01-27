@@ -27,7 +27,7 @@ public class Rounds {
     }
 
     public static void setCurrentPlayerPoints(int currentPlayerPoints) {
-        currentPlayerPoints = currentPlayerPoints;
+        Rounds.currentPlayerPoints = currentPlayerPoints;
     }
 
     public static int getCurrentRound() {
@@ -35,7 +35,7 @@ public class Rounds {
     }
 
     public static  void setCurrentRound(int currentRound) {
-        currentRound = currentRound;
+        Rounds.currentRound = currentRound;
     }
 
     public static ArrayList getCurrentPlayerCategories(){
@@ -63,7 +63,7 @@ public class Rounds {
     }
 
     public static void setIsCrownQuestion(boolean isCrownQuestion) {
-        Rounds.setCurrentPlayerPoints(0);
+        //Rounds.setCurrentPlayerPoints(0);
         Rounds.isCrownQuestion = isCrownQuestion;
     }
 }
