@@ -11,17 +11,19 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.chart.PieChart;
+import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
-import javax.swing.Timer;
-import java.awt.event.ActionListener;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Rounds {
     @FXML
     VBox firstBox;
+
+    @FXML
+    Button spinbtn;
 
     @FXML
     PieChart wheel;
@@ -101,6 +103,7 @@ public class Rounds {
         rotateTransition.setNode(wheel);
         rotateTransition.setByAngle(360 + angle );
         rotateTransition.setCycleCount(1);
+        spinbtn.setDisable(true);
         rotateTransition.play();
         rotateTransition.statusProperty().isEqualTo(Animation.Status.STOPPED).addListener(observable -> {
             try {
@@ -108,6 +111,7 @@ public class Rounds {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+            spinbtn.setDisable(false);
             whichCategory(angle);
         });
 
