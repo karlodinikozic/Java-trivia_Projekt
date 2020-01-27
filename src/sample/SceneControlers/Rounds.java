@@ -69,7 +69,7 @@ public class Rounds {
             
             try{
                 Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Scenes/CategoryPicker.fxml"));
-
+                root.getStylesheets().add("sample/StyleSheets/styles.css");
                 Scene newScene = new Scene(root);
                 
 
@@ -84,7 +84,7 @@ public class Rounds {
 
         try{
             Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Scenes/Question.fxml"));
-
+            root.getStylesheets().add("sample/StyleSheets/styles.css");
             Scene newScene = new Scene(root);
 
 

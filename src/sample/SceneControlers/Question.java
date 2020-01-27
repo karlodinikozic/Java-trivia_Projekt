@@ -20,7 +20,10 @@ import java.io.File;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 public class Question {
 
@@ -142,7 +145,7 @@ public class Question {
                     .setStyle("-fx-background-color: rgba(255,0,0,0.1);-fx-border-color: red");
         }
 
-       /* if(Rounds.getIsCrownQuestion() || Rounds.getCurrentPlayerPoints()==4) {
+        if(Rounds.getIsCrownQuestion() || Rounds.getCurrentPlayerPoints()==4) {
             Rounds.setCurrentPlayerPoints(0);
             Rounds.setIsCrownQuestion(false);
 
@@ -182,19 +185,25 @@ public class Question {
                         break;
                 }
             }
-        }*/
+        }
 
             //endgame clause
-           /* if (Rounds.getCurrentPlayerCategories().size() == 4) {
+            List<Boolean> helparray = (List<Boolean>) Rounds.getCurrentPlayerCategories().stream()
+                    .filter(val -> val.equals(true))
+                    .collect(Collectors.toList());
+
+
+
+           if (helparray.size() == 4) {
                 //TODO WINNER
-            }*/
+            }
 
 
             Stage currentStage =  (Stage) firstBox.getScene().getWindow();
             try{
                 Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Scenes/Rounds.fxml"));
                 Scene newScene = new Scene(root);
-
+                newScene.getStylesheets().add("sample/StyleSheets/styles.css");
                 currentStage.setScene(newScene);
 
             }catch (Exception err){
@@ -205,8 +214,5 @@ public class Question {
     }
 
 
-    //TODO ON CLICK button event
-        //check if button == RIGHT ANSWER
-            //ROUND.POINT++
-            //ROUND.is1Player = TOGGLE() AND ROUND.
+
 }
