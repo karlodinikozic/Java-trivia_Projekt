@@ -85,7 +85,7 @@ public class Question {
             while((line=br.readLine())!=null)
             {
                 questions.add(line.split("#"));
-                System.out.println(questions.size());
+
             }
             fr.close();
         }
@@ -96,7 +96,6 @@ public class Question {
 
         int rand = ThreadLocalRandom.current().nextInt(0, questions.size()-1);
 
-       // setQuestion(rand);
 
         String[] question  = questions.get(rand);
         TextQuestion.setText(question[0]);
@@ -188,13 +187,22 @@ public class Question {
                     .collect(Collectors.toList());
 
 
+            Stage currentStage =  (Stage) firstBox.getScene().getWindow();
+            if(helparray.size() == 4) {
 
-           if (helparray.size() == 4) {
-                //TODO WINNER
+               try{
+                   Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Scenes/Winner.fxml"));
+                   Scene newScene = new Scene(root);
+                   newScene.getStylesheets().add("sample/StyleSheets/styles.css");
+                   currentStage.setScene(newScene);
+
+               }catch (Exception err){
+                   System.out.println(err);
+               }
             }
 
 
-            Stage currentStage =  (Stage) firstBox.getScene().getWindow();
+
             try{
                 Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Scenes/Rounds.fxml"));
                 Scene newScene = new Scene(root);
