@@ -14,7 +14,7 @@
    <children>
       <HBox alignment="CENTER" prefHeight="62.0" prefWidth="900.0">
          <children>
-            <Label text="Trivia Crack">
+            <Label text="Pick Crown">
                <font>
                   <Font size="24.0" />
                </font>
