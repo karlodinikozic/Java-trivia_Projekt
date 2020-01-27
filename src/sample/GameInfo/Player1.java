@@ -52,6 +52,23 @@ public class Player1 {
         Player1.name = name;
     }
 
+    public static int countCategorys(){
+        int count = 0;
+        if(hasGeography){
+            count++;
+        }
+        if(hasHistory){
+            count++;
+        }
+        if(hasScience){
+            count++;
+        }
+        if(hasSport){
+            count++;
+        }
 
+
+        return count;
+    }
 
 }
