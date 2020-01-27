@@ -104,7 +104,7 @@ public class Rounds {
         rotateTransition.play();
         rotateTransition.statusProperty().isEqualTo(Animation.Status.STOPPED).addListener(observable -> {
             try {
-                Thread.sleep(1);
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
