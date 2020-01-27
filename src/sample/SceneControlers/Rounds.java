@@ -19,6 +19,7 @@ import javafx.util.Duration;
 import sample.GameInfo.Player1;
 import sample.GameInfo.Player2;
 
+import java.beans.Expression;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Rounds {
@@ -95,7 +96,11 @@ public class Rounds {
         Stage currentStage =  (Stage) firstBox.getScene().getWindow();
         Question.setCategory(category);
 
-       
+       try{
+           Thread.sleep(100);
+       }catch (Exception e){
+
+       }
 
         System.out.println(category);
 

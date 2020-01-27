@@ -21,7 +21,7 @@
       </HBox>
       <HBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
          <children>
-            <TextArea fx:id="TextQuestion" prefHeight="300.0" prefWidth="700.0" text="das" wrapText="true">
+            <TextArea fx:id="TextQuestion" editable="false" prefHeight="300.0" prefWidth="700.0" text="das" wrapText="true">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
