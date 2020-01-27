@@ -1,7 +1,8 @@
 package sample.SceneControlers;
 
 
-import javafx.application.Application;
+import javafx.animation.Animation;
+import javafx.animation.RotateTransition;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -12,6 +13,7 @@ import javafx.scene.Scene;
 import javafx.scene.chart.PieChart;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import javax.swing.Timer;
 import java.awt.event.ActionListener;
@@ -23,31 +25,13 @@ public class Rounds {
 
     @FXML
     PieChart wheel;
-    int counter = 1000;
-    Timer timer;
-    double speed = 4;
-    double angle = 345;
+    int angle = 1000;
 
-    @FXML
-    ActionListener spin = new ActionListener() {
-        @Override
-        public void actionPerformed(java.awt.event.ActionEvent e) {
-            speed -= speed/counter;
-
-            angle += 0.36*speed;
-            wheel.setRotate(wheel.getRotate() + 0.36*speed);
-            counter--;
-            if(counter==0){
-                timer.stop();
-
-                counter = 1000;
-                whichCategory();
-            }
-        }
-    };
+    RotateTransition rotateTransition = new RotateTransition();
 
 
-    private void whichCategory(){
+
+    private void whichCategory(int angle){
         System.out.println(Math.ceil(angle%360));
         int categoryAngle =  (int)(angle % 360);
         if(categoryAngle<=57 || categoryAngle>345){
@@ -112,13 +96,22 @@ public class Rounds {
 
 
     public void onSpin(ActionEvent actionEvent) {
-        wheel.setRotate(345);
-        angle=345;
-        counter= ThreadLocalRandom.current().nextInt(1000, 2000 + 1);;
-        speed = 4;
-        timer = new Timer(1,spin);
-        timer.start();
+        angle = + ThreadLocalRandom.current().nextInt(1, 360+1);
+        rotateTransition.setDuration(Duration.millis(1000));
+        rotateTransition.setNode(wheel);
+        rotateTransition.setByAngle(360 + angle );
+        rotateTransition.setCycleCount(1);
+        rotateTransition.play();
+        rotateTransition.statusProperty().isEqualTo(Animation.Status.STOPPED).addListener(observable -> {
+            try {
+                Thread.sleep(1);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            whichCategory(angle);
+        });
+
         //TODO disable button
-        //whichCategory();
+        //;
     }
 }
