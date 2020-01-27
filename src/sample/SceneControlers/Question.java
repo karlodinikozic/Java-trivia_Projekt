@@ -35,7 +35,6 @@ public class Question {
 
     @FXML
     VBox firstBox;
-
     @FXML
     TextArea TextQuestion;
     @FXML
@@ -46,10 +45,6 @@ public class Question {
     Button TextAnswer3;
     @FXML
     Button TextAnswer4;
-
-
-
-
     @FXML
     Label nameCategory;
 
@@ -86,7 +81,7 @@ public class Question {
             String line;
             while((line=br.readLine())!=null)
             {
-                questions.add(line.split(","));
+                questions.add(line.split("#"));
                 System.out.println(questions.size());
             }
             fr.close();
@@ -200,10 +195,7 @@ public class Question {
             }catch (Exception err){
                     System.out.println(err);
             }
-
-
     }
-
 
     //TODO ON CLICK button event
         //check if button == RIGHT ANSWER

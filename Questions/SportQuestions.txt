@@ -1,3 +1,3 @@
-What should you do when there is a runner on 1st base and the ball is hit?,Throw the ball to 2nd base,Throw it to the catcher,Throw the ball to 1st base,Stand with the ball
-Runners are at 1st and 3rd. What should you do?,Throw the ball to 2nd and then throw it home,Throw the ball to 3rd,Stand and hold it,Throw the ball to 1st
-What gear should you wear to softball games and practices?,Softball pants, barefoot, a shirt,Shorts, barefoot, a shirt,Softball pants, softball socks, cleats, and a shirt,Socks, short, a shirt
+What should you do when there is a runner on 1st base and the ball is hit?#Throw the ball to 2nd base#Throw it to the catcher#Throw the ball to 1st base#Stand with the ball
+Runners are at 1st and 3rd. What should you do?#Throw the ball to 2nd and then throw it home#Throw the ball to 3rd#Stand and hold it#Throw the ball to 1st
+What gear should you wear to softball games and practices?#Softball pants, barefoot, a shirt#Shorts, barefoot, a shirt#Softball pants, softball socks, cleats, and a shirt#Socks, short, a shirt

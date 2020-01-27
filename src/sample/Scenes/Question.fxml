@@ -30,9 +30,9 @@
       </HBox>
       <HBox alignment="CENTER" prefHeight="150.0" prefWidth="200.0">
          <children>
-            <Button fx:id="TextAnswer1" mnemonicParsing="false" onAction="#checkIsRightAnswer" prefHeight="60.0" prefWidth="500.0" text="Button">
+            <Button fx:id="TextAnswer1" mnemonicParsing="false" onAction="#checkIsRightAnswer" prefHeight="60.0" prefWidth="500.0" text="Button" wrapText="true">
                <font>
-                  <Font size="24.0" />
+                  <Font size="18.0" />
                </font></Button>
          </children>
          <VBox.margin>
@@ -41,17 +41,17 @@
       </HBox>
       <HBox alignment="CENTER" prefHeight="150.0" prefWidth="200.0">
          <children>
-            <Button fx:id="TextAnswer2" mnemonicParsing="false" onAction="#checkIsRightAnswer" prefHeight="60.0" prefWidth="500.0" text="Button">
+            <Button fx:id="TextAnswer2" mnemonicParsing="false" onAction="#checkIsRightAnswer" prefHeight="60.0" prefWidth="500.0" text="Button" wrapText="true">
                <font>
-                  <Font size="24.0" />
+                  <Font size="18.0" />
                </font></Button>
          </children>
       </HBox>
       <HBox alignment="CENTER" prefHeight="150.0" prefWidth="200.0">
          <children>
-            <Button fx:id="TextAnswer3" mnemonicParsing="false" onAction="#checkIsRightAnswer" prefHeight="60.0" prefWidth="500.0" text="Button">
+            <Button fx:id="TextAnswer3" mnemonicParsing="false" onAction="#checkIsRightAnswer" prefHeight="60.0" prefWidth="500.0" text="Button" wrapText="true">
                <font>
-                  <Font size="24.0" />
+                  <Font size="18.0" />
                </font></Button>
          </children>
       </HBox>
@@ -59,7 +59,7 @@
          <children>
             <Button fx:id="TextAnswer4" mnemonicParsing="false" onAction="#checkIsRightAnswer" prefHeight="60.0" prefWidth="500.0" text="Button">
                <font>
-                  <Font size="24.0" />
+                  <Font size="18.0" />
                </font></Button>
          </children>
       </HBox>
