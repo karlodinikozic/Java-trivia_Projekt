@@ -12,9 +12,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.chart.PieChart;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import sample.GameInfo.Player1;
+import sample.GameInfo.Player2;
 
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -25,16 +28,45 @@ public class Rounds {
     @FXML
     Button spinbtn;
 
+
+    @FXML
+    Label p1Name;
+    @FXML
+    Label p1Geo;
+    @FXML
+    Label p1Sci;
+    @FXML
+    Label p1Spo;
+    @FXML
+    Label p1His;
+
+    @FXML
+    Label p2Name;
+    @FXML
+    Label p2Geo;
+    @FXML
+    Label p2Sci;
+    @FXML
+    Label p2Spo;
+    @FXML
+    Label p2His;
+
+    @FXML
+    Label cPP;
+
+
+
+
     @FXML
     PieChart wheel;
-    int angle = 1000;
+    int angle = 345;
 
     RotateTransition rotateTransition = new RotateTransition();
 
 
 
     private void whichCategory(int angle){
-        System.out.println(Math.ceil(angle%360));
+
         int categoryAngle =  (int)(angle % 360);
         if(categoryAngle<=57 || categoryAngle>345){
             NewQuestion("Crown");
@@ -51,6 +83,7 @@ public class Rounds {
         else if(categoryAngle<=345 &&categoryAngle>273){
             NewQuestion("Sport");
         }
+
 
 
     }
@@ -100,6 +133,32 @@ public class Rounds {
                sample.GameInfo.Rounds.getCurrentRound()+1
        );
        sample.GameInfo.Rounds.setIsCrownQuestion(false);
+
+        //Init categories and names
+       //P1
+       p1Name.setText(Player1.getName());
+       if(Player1.getHasGeography()){p1Geo.setText("Geography: 1");}
+       if(Player1.getHasScience()){p1Sci.setText("Science: 1");}
+       if(Player1.getHasSport()){p1Spo.setText("Sport: 1");}
+       if(Player1.getHasHistory()){p1His.setText("History: 1");}
+       //P2
+       p2Name.setText(Player2.getName());
+       if(Player2.getHasGeography()){p2Geo.setText("Geography: 1");}
+       if(Player2.getHasScience()){p2Sci.setText("Science: 1");}
+       if(Player2.getHasSport()){p2Spo.setText("Sport: 1");}
+       if(Player2.getHasHistory()){p2His.setText("History: 1");}
+
+
+        if(sample.GameInfo.Rounds.getIs1Player()){
+            System.out.println("player has =" +sample.GameInfo.Rounds.getCurrentPlayerPoints());
+            cPP.setText(Player1.getName() + " has "
+                    + sample.GameInfo.Rounds.getCurrentPlayerPoints() + " /4");
+        }
+        else{
+            cPP.setText(Player2.getName() + " has "
+                    + sample.GameInfo.Rounds.getCurrentPlayerPoints() + " /4");
+        }
+
 
 
        ObservableList<PieChart.Data> pieChartData =
