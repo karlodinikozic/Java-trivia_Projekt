@@ -126,8 +126,9 @@ public class Question {
         String answer = ((Button)(actionEvent.getTarget())).getText();
 
         if(answer.equals(correctAnswer)){
-            Rounds.setCurrentPlayerPoints(Rounds.getCurrentPlayerPoints()+1);
-            System.out.println("hey");
+            int help  = Rounds.getCurrentPlayerPoints()+1;
+            Rounds.setCurrentPlayerPoints(help);
+            System.out.println(Rounds.getCurrentPlayerPoints());
             ((Button)(actionEvent.getTarget()))
                    .setStyle("-fx-background-color: rgba(0,255,0,0.1);-fx-border-color: green");
 
