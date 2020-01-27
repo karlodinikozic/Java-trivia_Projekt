@@ -1,5 +1,5 @@
-.default-color0.chart-pie { -fx-pie-color: gold; }
-.default-color1.chart-pie { -fx-pie-color: #19bcff; }
-.default-color2.chart-pie { -fx-pie-color: #67ff2f; }
-.default-color3.chart-pie { -fx-pie-color: #ff8e0f; }
-.default-color4.chart-pie { -fx-pie-color: #ff3a13; }
+.default-color0.chart-pie { -fx-pie-color: #000000; }/*History*/
+.default-color1.chart-pie { -fx-pie-color: #1a00ff; }/*science*/
+.default-color2.chart-pie { -fx-pie-color: #00ff08; }/*geography*/
+.default-color3.chart-pie { -fx-pie-color: orange; }/*crown*/
+.default-color4.chart-pie { -fx-pie-color: #e70aff; } /*sport*/

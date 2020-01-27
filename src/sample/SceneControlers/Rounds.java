@@ -59,7 +59,7 @@ public class Rounds {
 
     @FXML
     PieChart wheel;
-    int angle = 345;
+    int angle = 0;
 
     RotateTransition rotateTransition = new RotateTransition();
 
@@ -68,6 +68,7 @@ public class Rounds {
     private void whichCategory(int angle){
 
         int categoryAngle =  (int)(angle % 360);
+        System.out.println("angle is = " + angle);
         if(categoryAngle<=57 || categoryAngle>345){
             NewQuestion("Crown");
         }
@@ -97,6 +98,7 @@ public class Rounds {
        
 
         System.out.println(category);
+
 
         if(category.equalsIgnoreCase("Crown")){
             
@@ -129,6 +131,9 @@ public class Rounds {
 
    @FXML
    public void initialize() {
+
+
+
        sample.GameInfo.Rounds.setCurrentRound(
                sample.GameInfo.Rounds.getCurrentRound()+1
        );
@@ -172,7 +177,7 @@ public class Rounds {
        wheel.setLegendVisible(false);
        wheel.setLabelLineLength(0);
        wheel.setLabelsVisible(false);
-
+       wheel.setRotate(0);
 
 
    }
@@ -180,22 +185,30 @@ public class Rounds {
 
 
     public void onSpin(ActionEvent actionEvent) {
-        angle = + ThreadLocalRandom.current().nextInt(1, 360+1);
+        System.out.println("Hey");
+        wheel.setRotate(0);
+
+        angle = + ThreadLocalRandom.current().nextInt(5, 360+1);
+
         rotateTransition.setDuration(Duration.millis(1000));
         rotateTransition.setNode(wheel);
         rotateTransition.setByAngle(360 + angle );
         rotateTransition.setCycleCount(1);
         spinbtn.setDisable(true);
-        rotateTransition.play();
-        rotateTransition.statusProperty().isEqualTo(Animation.Status.STOPPED).addListener(observable -> {
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            spinbtn.setDisable(false);
-            whichCategory(angle);
+        rotateTransition.setOnFinished(e->{
+
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException er) {
+                    er.printStackTrace();
+                }
+
+                whichCategory(angle);
+                spinbtn.setDisable(false);
+
+
         });
+        rotateTransition.play();
 
 
     }

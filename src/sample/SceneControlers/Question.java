@@ -202,7 +202,7 @@ public class Question {
                     .filter(val -> val.equals(true))
                     .collect(Collectors.toList());
 
- 
+
             if(helparray.size() == 4) {
                 Stage currentStage =  (Stage) firstBox.getScene().getWindow();
                try{

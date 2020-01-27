@@ -50,8 +50,8 @@ public class Rounds {
         else{
             categories.add(Player2.getHasGeography());
             categories.add(Player2.getHasScience());
-            categories.add(Player2.getHasHistory());
             categories.add(Player2.getHasSport());
+            categories.add(Player2.getHasHistory());
         }
         return categories;
     }
