@@ -56,11 +56,26 @@ public class Rounds {
     }
 
     private  void NewQuestion (String category){
-        //TODO IF CATEGORY CROWN
-        //CATEGORY CHOOSER
-        System.out.println(category);
         Stage currentStage =  (Stage) firstBox.getScene().getWindow();
-        System.out.println(currentStage);
+
+        System.out.println(category);
+
+        if(category.equalsIgnoreCase("Crown")){
+            System.out.println("jebalte kruna");
+            try{
+                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Scenes/CategoryPicker.fxml"));
+
+                Scene newScene = new Scene(root);
+                Question.setCategory(category);
+
+                currentStage.setScene(newScene);
+            }catch (Exception err){
+                System.out.println(err);
+            }
+            return;
+        }
+
+
         try{
             Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Scenes/Question.fxml"));
 
@@ -78,6 +93,8 @@ public class Rounds {
        sample.GameInfo.Rounds.setCurrentRound(
                sample.GameInfo.Rounds.getCurrentRound()+1
        );
+
+
 
        ObservableList<PieChart.Data> pieChartData =
                FXCollections.observableArrayList(
@@ -115,7 +132,6 @@ public class Rounds {
             whichCategory(angle);
         });
 
-        //TODO disable button
-        //;
+
     }
 }

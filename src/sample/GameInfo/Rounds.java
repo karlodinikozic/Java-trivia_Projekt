@@ -8,7 +8,7 @@ public class Rounds {
     private static int currentPlayerPoints=0;
     private static int currentRound;
     private static boolean is1Player = true;
-
+    private static boolean isCrownQuestion = false;
 
 
 
@@ -48,4 +48,13 @@ public class Rounds {
     }
 
 
+    public static boolean getIsCrownQuestion() {
+
+        return isCrownQuestion;
+    }
+
+    public static void setIsCrownQuestion(boolean isCrownQuestion) {
+        Rounds.setCurrentPlayerPoints(0);
+        Rounds.isCrownQuestion = isCrownQuestion;
+    }
 }
