@@ -58,14 +58,13 @@ public class Rounds {
     private  void NewQuestion (String category){
         //TODO IF CATEGORY CROWN
         //CATEGORY CHOOSER
-        System.out.println(category);
         Stage currentStage =  (Stage) firstBox.getScene().getWindow();
-        System.out.println(currentStage);
+        Question.setCategory(category);
         try{
             Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Scenes/Question.fxml"));
 
             Scene newScene = new Scene(root);
-            Question.setCategory(category);
+
 
             currentStage.setScene(newScene);
         }catch (Exception err){
