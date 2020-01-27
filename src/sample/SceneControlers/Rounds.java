@@ -60,6 +60,28 @@ public class Rounds {
         //CATEGORY CHOOSER
         Stage currentStage =  (Stage) firstBox.getScene().getWindow();
         Question.setCategory(category);
+
+        Stage currentStage =  (Stage) firstBox.getScene().getWindow();
+
+        System.out.println(category);
+
+        if(category.equalsIgnoreCase("Crown")){
+            
+            try{
+                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Scenes/CategoryPicker.fxml"));
+
+                Scene newScene = new Scene(root);
+                
+
+                currentStage.setScene(newScene);
+            }catch (Exception err){
+                System.out.println(err);
+            }
+            return;
+        }
+
+
+
         try{
             Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Scenes/Question.fxml"));
 
@@ -77,6 +99,8 @@ public class Rounds {
        sample.GameInfo.Rounds.setCurrentRound(
                sample.GameInfo.Rounds.getCurrentRound()+1
        );
+
+
 
        ObservableList<PieChart.Data> pieChartData =
                FXCollections.observableArrayList(
@@ -114,7 +138,6 @@ public class Rounds {
             whichCategory(angle);
         });
 
-        //TODO disable button
-        //;
+
     }
 }

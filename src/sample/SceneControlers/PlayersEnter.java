@@ -55,6 +55,7 @@ public class PlayersEnter {
            try{
                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Scenes/Rounds.fxml"));
                Scene newScene = new Scene(root);
+               newScene.getStylesheets().add("sample/StyleSheets/styles.css");
                currentStage.setScene(newScene);
            }catch (Exception err){
                System.out.println(err);
