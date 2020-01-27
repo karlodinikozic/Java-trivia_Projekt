@@ -93,7 +93,12 @@ public class Question {
         {
             e.printStackTrace();
         }
+        try{
+           Thread.sleep(200);
+        }
+        catch (Exception e){
 
+        }
         int rand = ThreadLocalRandom.current().nextInt(0, questions.size()-1);
 
 
