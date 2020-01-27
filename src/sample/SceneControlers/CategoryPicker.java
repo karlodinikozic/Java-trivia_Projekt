@@ -8,7 +8,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import sample.GameInfo.Player1;
 import sample.GameInfo.Rounds;
+
+import java.util.ArrayList;
 
 
 public class CategoryPicker {
@@ -16,11 +19,32 @@ public class CategoryPicker {
     @FXML
     VBox firstBox;
 
+    @FXML
+    Button GeoBtn;
+    @FXML
+    Button SciBtn;
+    @FXML
+    Button SpoBtn;
+    @FXML
+    Button HisBtn;
+
+    @FXML
+    public void initialize() {
+
+        ArrayList<Boolean> category = Rounds.getCurrentPlayerCategories();
+
+        GeoBtn.setDisable(category.get(0));
+        SciBtn.setDisable(category.get(1));
+        SpoBtn.setDisable(category.get(2));
+        HisBtn.setDisable(category.get(3));
+
+
+    }
+
     public void choseCategory(ActionEvent actionEvent) {
         String button_text = ((Button) actionEvent.getTarget()).getText();
         Question.setCategory(button_text);
         Rounds.setIsCrownQuestion(true);
-
 
         Stage currentStage =  (Stage) firstBox.getScene().getWindow();
         try{

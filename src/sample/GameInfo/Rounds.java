@@ -43,8 +43,8 @@ public class Rounds {
         if(is1Player){
             categories.add(Player1.getHasGeography());
             categories.add(Player1.getHasScience());
-            categories.add(Player1.getHasHistory());
             categories.add(Player1.getHasSport());
+            categories.add(Player1.getHasHistory());
 
         }
         else{

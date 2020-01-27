@@ -54,7 +54,7 @@
                         <Glow />
                      </effect>
                   </Button>
-                  <Button fx:id="HIsBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#choseCategory" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: yellow;" text="History" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                  <Button fx:id="HisBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#choseCategory" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: yellow;" text="History" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                      <font>
                         <Font size="24.0" />
                      </font>

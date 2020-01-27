@@ -99,7 +99,7 @@ public class Rounds {
        sample.GameInfo.Rounds.setCurrentRound(
                sample.GameInfo.Rounds.getCurrentRound()+1
        );
-
+       sample.GameInfo.Rounds.setIsCrownQuestion(false);
 
 
        ObservableList<PieChart.Data> pieChartData =
