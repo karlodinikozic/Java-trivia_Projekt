@@ -7,6 +7,15 @@ public class Rounds {
 
     private static int currentPlayerPoints=0;
     private static int currentRound;
+
+    public static boolean getIs1Player() {
+        return is1Player;
+    }
+
+    public static void setIs1Player(boolean is1Player) {
+        Rounds.is1Player = is1Player;
+    }
+
     private static boolean is1Player = true;
     private static boolean isCrownQuestion = false;
 
