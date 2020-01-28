@@ -40,6 +40,8 @@ public class CategoryPicker {
         SpoBtn.setDisable(category.get(2));
         HisBtn.setDisable(category.get(3));
 
+        Rounds.setCurrentPlayerPoints(0);
+
 
     }
 
