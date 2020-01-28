@@ -10,7 +10,7 @@
 
 <VBox fx:id="firstBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" spacing="10.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SceneControlers.Question">
    <children>
-      <HBox alignment="CENTER" prefHeight="62.0" prefWidth="900.0">
+      <HBox alignment="CENTER" prefHeight="62.0" prefWidth="900.0" style="-fx-background-color: #33adff;">
          <children>
             <Label fx:id="nameCategory" text="*Category*">
                <font>

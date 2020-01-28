@@ -43,10 +43,11 @@ public class Winner {
     public void initialize() {
 
         if(Rounds.getIs1Player()){
-            winnerName.setText(Player1.getName()+" has won.");
+            winnerName.setText(Player1.getName()+" HAS WON.");
+
         }
         else{
-            winnerName.setText(Player2.getName()+" has won.");
+            winnerName.setText(Player2.getName()+" HAS WON.");
         }
 
         p1Name.setText(Player1.getName());
@@ -61,8 +62,9 @@ public class Winner {
     public void playagain(ActionEvent actionEvent) {
 
         Stage currentStage =  (Stage) firstBox.getScene().getWindow();
+
         try{
-            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Scenes/Question.fxml"));
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Scenes/sample.fxml"));
             root.getStylesheets().add("sample/StyleSheets/styles.css");
             Scene newScene = new Scene(root);
 

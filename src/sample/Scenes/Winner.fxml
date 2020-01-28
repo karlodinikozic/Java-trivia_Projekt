@@ -10,29 +10,24 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="firstBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SceneControlers.Winner">
+<VBox fx:id="firstBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" stylesheets="@../StyleSheets/styles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SceneControlers.Winner">
    <children>
-      <HBox alignment="CENTER" prefHeight="62.0" prefWidth="900.0">
-         <children>
-            <Label text="CONGRATULATIONS!">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Label>
-         </children>
-      </HBox>
+      <HBox alignment="CENTER" prefHeight="62.0" prefWidth="900.0" />
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Label text="YOU WON!">
+            <Label text="CONGRATULATIONS!">
                <font>
                   <Font size="36.0" />
                </font>
             </Label>
          </children>
       </HBox>
-      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+      <HBox fx:id="winimage" alignment="CENTER" prefHeight="222.0" prefWidth="900.0" stylesheets="@../StyleSheets/styles.css">
          <children>
-            <Label fx:id="winnerName" />
+            <Label fx:id="winnerName" textFill="WHITE">
+               <font>
+                  <Font size="48.0" />
+               </font></Label>
          </children>
       </HBox>
       <VBox prefHeight="307.0" prefWidth="900.0">

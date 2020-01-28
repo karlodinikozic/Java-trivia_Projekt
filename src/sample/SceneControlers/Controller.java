@@ -14,13 +14,17 @@ public class Controller {
 
     @FXML
     VBox firstBox;
+    @FXML
+    VBox backgoundImage;
 
 
 
     public void onStart(ActionEvent e) {
         Stage currentStage =  (Stage) firstBox.getScene().getWindow();
+
         try{
             Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Scenes/PlayersEnter.fxml"));
+            root.getStylesheets().add("sample/StyleSheets/styles.css");
             Scene newScene = new Scene(root);
             currentStage.setScene(newScene);
         }catch (Exception err){

@@ -2,23 +2,24 @@
 
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <VBox fx:id="firstBox" maxHeight="600.0" maxWidth="900.0" minHeight="600.0" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SceneControlers.Controller">
    <children>
-      <HBox alignment="CENTER" prefHeight="62.0" prefWidth="900.0">
+      <HBox fx:id="back" alignment="CENTER" prefHeight="62.0" prefWidth="900.0" style="-fx-background-color: #33adff;">
          <children>
-            <Label text="Trivia Crack">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Label>
+            <ImageView fitHeight="83.0" fitWidth="265.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/triviacrack_title.png" />
+               </image>
+            </ImageView>
          </children>
       </HBox>
-      <VBox alignment="CENTER" prefHeight="518.0" prefWidth="900.0" spacing="90.0" style="-fx-background-color: lightgrey;">
+      <VBox fx:id="backgoundImage" alignment="CENTER" prefHeight="518.0" prefWidth="900.0" spacing="90.0" stylesheets="@../StyleSheets/styles.css">
          <children>
             <Button fx:id="start" mnemonicParsing="false" onAction="#onStart" prefHeight="60.0" prefWidth="200.0" text="Start" textAlignment="CENTER">
                <font>

@@ -3,3 +3,15 @@
 .default-color2.chart-pie { -fx-pie-color: #2ab3ff; }/*geography*/
 .default-color3.chart-pie { -fx-pie-color: #9a38ff; }/*crown*/
 .default-color4.chart-pie { -fx-pie-color: #ff8f17; } /*sport*/
+
+
+
+#backgoundImage{
+  -fx-background-image: url("../Images/charas-lg.png");
+  -fx-background-size: 100%;
+}
+
+#winimage{
+  -fx-background-image: url("../Images/tc-banner.jpg");
+  -fx-background-size: 100%;
+}
