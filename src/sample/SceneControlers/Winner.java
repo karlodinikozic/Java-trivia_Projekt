@@ -1,10 +1,17 @@
 package sample.SceneControlers;
 
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.chart.PieChart;
 import javafx.scene.control.Label;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 import sample.GameInfo.Player1;
 import sample.GameInfo.Player2;
 import sample.GameInfo.Rounds;
@@ -24,6 +31,9 @@ public class Winner {
 
     @FXML
     Label p2Points;
+
+    @FXML
+    VBox firstBox;
 
 
 
@@ -48,4 +58,18 @@ public class Winner {
 
     }
 
+    public void playagain(ActionEvent actionEvent) {
+
+        Stage currentStage =  (Stage) firstBox.getScene().getWindow();
+        try{
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Scenes/Question.fxml"));
+            root.getStylesheets().add("sample/StyleSheets/styles.css");
+            Scene newScene = new Scene(root);
+
+
+            currentStage.setScene(newScene);
+        }catch (Exception err){
+            System.out.println(err);
+        }
+    }
 }

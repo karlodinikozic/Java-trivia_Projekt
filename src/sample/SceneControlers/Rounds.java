@@ -191,11 +191,11 @@ public class Rounds {
 
        ObservableList<PieChart.Data> pieChartData =
                FXCollections.observableArrayList(
-                       new PieChart.Data("", 72),
-                       new PieChart.Data("", 72),
-                       new PieChart.Data("", 72),
-                       new PieChart.Data("", 72),
-                       new PieChart.Data("", 72));
+                       new PieChart.Data("History", 72),
+                       new PieChart.Data("Science", 72),
+                       new PieChart.Data("Geography", 72),
+                       new PieChart.Data("Crown", 72),
+                       new PieChart.Data("Sport", 72));
        wheel.setData(pieChartData);
        wheel.setLegendVisible(false);
        wheel.setLabelLineLength(0);

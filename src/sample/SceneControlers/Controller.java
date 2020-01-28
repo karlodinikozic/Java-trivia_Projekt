@@ -1,5 +1,6 @@
 package sample.SceneControlers;
 
+import com.sun.media.jfxmediaimpl.platform.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
@@ -29,5 +30,9 @@ public class Controller {
 
         currentStage.show();
 
+    }
+
+    public void quitApp(ActionEvent actionEvent) {
+        System.exit(0);
     }
 }

@@ -10,10 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="firstBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1"
-      xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="sample.SceneControlers.Winner"
->
+<VBox fx:id="firstBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SceneControlers.Winner">
    <children>
       <HBox alignment="CENTER" prefHeight="62.0" prefWidth="900.0">
          <children>
@@ -76,7 +73,7 @@
       </VBox>
       <HBox alignment="CENTER" prefHeight="62.0" prefWidth="900.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="200.0" text="Play Again">
+            <Button mnemonicParsing="false" onAction="#playagain" prefHeight="60.0" prefWidth="200.0" text="Play Again">
                <font>
                   <Font size="24.0" />
                </font>

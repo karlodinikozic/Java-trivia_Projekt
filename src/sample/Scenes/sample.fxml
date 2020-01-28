@@ -7,10 +7,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="firstBox" maxHeight="600.0" maxWidth="900.0" minHeight="600.0"
-      minWidth="-Infinity" prefHeight="600.0"
-      prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="sample.SceneControlers.Controller">
+<VBox fx:id="firstBox" maxHeight="600.0" maxWidth="900.0" minHeight="600.0" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SceneControlers.Controller">
    <children>
       <HBox alignment="CENTER" prefHeight="62.0" prefWidth="900.0">
          <children>
@@ -33,7 +30,7 @@
                   <Font name="Symbol" size="24.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="200.0" text="Exit" textAlignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#quitApp" prefHeight="60.0" prefWidth="200.0" text="Exit" textAlignment="CENTER">
                <font>
                   <Font name="Symbol" size="24.0" />
                </font>
