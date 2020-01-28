@@ -19,14 +19,9 @@
             </ImageView>
          </children>
       </HBox>
-      <VBox fx:id="backgoundImage" alignment="CENTER" prefHeight="518.0" prefWidth="900.0" spacing="90.0" stylesheets="@../StyleSheets/styles.css">
+      <VBox fx:id="backgoundImage" alignment="CENTER" prefHeight="518.0" prefWidth="900.0" spacing="145.0" stylesheets="@../StyleSheets/styles.css">
          <children>
             <Button fx:id="start" mnemonicParsing="false" onAction="#onStart" prefHeight="60.0" prefWidth="200.0" text="Start" textAlignment="CENTER">
-               <font>
-                  <Font name="Symbol" size="24.0" />
-               </font>
-            </Button>
-            <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="200.0" text="Options" textAlignment="CENTER">
                <font>
                   <Font name="Symbol" size="24.0" />
                </font>
