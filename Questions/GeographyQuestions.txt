@@ -2,4 +2,25 @@ Which ocean lies on the east coast of the United States?#Atlantic#Pacific#Indian
 Which is the world's highest mountain?#Mount Everest#Kilimanjaro#K2#Makalu
 Which of these cities is not in Europe?#Moscow#Prague#Reykjavik#Barcelona
 The United Kingdom is comprised of how many countries?#4#5#6#8
+What is Earth's largest continent?#Asia#Antartica#Africa#Europe
+What razor-thin country accounts for more than half of the western coastline of South America?#Chile#Peru#Ecuador#Bolivia
+What river runs through Baghdad?#Tigris#Euphrates#Jordan#Karun
+What country has the most natural lakes?#Canada#United States#India#Australia
+What is the only sea without any coasts?#Sargasso Sea#Adriatic Sea#Mediterranean Sea#Celebes Sea
+What percentage of the River Nile is located in Egypt?#22%#9%#83%#100%
+Which African nation has the most pyramids?#Sudan#Algeria#Libya#Egypt
+What country has the most coastline?#Canada#Russia#China#United States
+What country is home to Kangaroo Island?#Australia#France#Japan#New Zeland
+What is the largest country in South America?#Brazil#Peru#Argentina#Columbia
+What city is the capital of Australia?#Canberra#Sydney#Melbourne#Perth
+What is the smallest independent country on Earth?#Vatican City#Nauru#Grenada#Monaco
+What is the only continent with land in all four hemispheres?#Africa#Asia#Australia#Europe
+What continent contains the most fresh water?#Antartica#Asia#Europe#Africa
+What ocean is home to 75% of the Earth's volcanoes?#Pacific#Atlantic#Indian#Artic
+How many countries are there in Africa?#54#42#39#64
+What European country is home to Transylvania?#Romania#Slovenia#Croatia#Bulgaria
+Which country is NOT part of the Scaninavian Peninsula?#Denmark#Norway#Sweden#Finland
+What is the capital of Moldova?#Kišinjev#Tiraspol#Minsk#Gomel
+What is the national river of Russia?#Volga#Rhine#Ob#Danube
+What is the capital of European Union?#Bruxellesa#Pairs#Amsterdam#Berlin
 

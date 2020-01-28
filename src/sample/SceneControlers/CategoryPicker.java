@@ -8,7 +8,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import sample.GameInfo.Player1;
 import sample.GameInfo.Rounds;
 
 import java.util.ArrayList;
