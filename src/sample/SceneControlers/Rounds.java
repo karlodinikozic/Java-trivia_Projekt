@@ -193,25 +193,24 @@ public class Rounds {
            p1H.setStyle("-fx-blend-mode: null;");
        }
        //P2
-       p2Name.setText(Player2.getName());
-       if(Player2.getHasGeography()){p2Geo.setText("Geography");
 
+       p2Name.setText(Player2.getName());
+       if(Player2.getHasGeography()){
            p2G.setStyle("-fx-blend-mode: null;");
 
        }
-       if(Player2.getHasScience()){p2Sci.setText("Science");
+       if(Player2.getHasScience()){
 
            p2S.setStyle("-fx-blend-mode: null;");
           }
-       if(Player2.getHasSport()){p2Spo.setText("Sport");
+       if(Player2.getHasSport()){
 
            p2Sp.setStyle("-fx-blend-mode: null;");
        }
-       if(Player2.getHasHistory()){p2His.setText("History");
+       if(Player2.getHasHistory()){
 
            p2H.setStyle("-fx-blend-mode: null;");
        }
-
 
         if(sample.GameInfo.Rounds.getIs1Player()){
             System.out.println("player has =" +sample.GameInfo.Rounds.getCurrentPlayerPoints());
