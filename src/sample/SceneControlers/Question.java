@@ -1,7 +1,5 @@
 package sample.SceneControlers;
 
-import javafx.animation.RotateTransition;
-import javafx.animation.ScaleTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,7 +10,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import javafx.util.Duration;
 import sample.GameInfo.Player1;
 import sample.GameInfo.Player2;
 import sample.GameInfo.Rounds;
@@ -21,12 +18,10 @@ import sample.GameInfo.Rounds;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
-import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
-import java.util.concurrent.TimeUnit;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
@@ -58,6 +53,7 @@ public class Question {
 
     @FXML
     public void initialize()  {
+
 
 
         String fileName="";
@@ -138,7 +134,7 @@ public class Question {
 
     }
 
-    public void checkIsRightAnswer(ActionEvent actionEvent) throws InterruptedException {
+    public void checkIsRightAnswer(ActionEvent actionEvent) {
         String answer = ((Button)(actionEvent.getTarget())).getText();
 
         if(answer.equals(correctAnswer)){
@@ -147,51 +143,28 @@ public class Question {
 
             ((Button)(actionEvent.getTarget()))
                    .setStyle("-fx-background-color: rgba(0,255,0,0.1);-fx-border-color: green");
+
         } else{
 
             Rounds.setCurrentPlayerPoints(0);
             Rounds.setIs1Player(!Rounds.getIs1Player());
             ((Button)(actionEvent.getTarget()))
                     .setStyle("-fx-background-color: rgba(255,0,0,0.1);-fx-border-color: red");
-
         }
-
-        ScaleTransition scaleTransition = new ScaleTransition();
-        scaleTransition.setDuration(Duration.millis(400));
-        scaleTransition.setNode((Button)(actionEvent.getTarget()));
-        scaleTransition.setByX(0.2f);
-        scaleTransition.setByY(0.2f);
-        scaleTransition.setCycleCount(4);
-        scaleTransition.setAutoReverse(true);
-
-        scaleTransition.setOnFinished(e->{
-            changeScene();
-        });
-        scaleTransition.play();
-
-
-
-
-    }
-
-
-    private void changeScene(){
         if(Rounds.getCurrentPlayerPoints()==4){
 
             Stage currentStage =  (Stage) firstBox.getScene().getWindow();
 
 
-            try{
+                try{
+                    Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Scenes/CategoryPicker.fxml"));
+                    Scene newScene = new Scene(root);
+                    newScene.getStylesheets().add("sample/StyleSheets/styles.css");
+                    currentStage.setScene(newScene);
 
-                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Scenes/CategoryPicker.fxml"));
-                Scene newScene = new Scene(root);
-                newScene.getStylesheets().add("sample/StyleSheets/styles.css");
-
-                currentStage.setScene(newScene);
-
-            }catch (Exception err){
-                System.out.println(err);
-            }
+                }catch (Exception err){
+                    System.out.println(err);
+                }
 
         }
 
@@ -239,44 +212,40 @@ public class Question {
             }
         }
 
-        //endgame clause
-        List<Boolean> helparray = (List<Boolean>) Rounds.getCurrentPlayerCategories().stream()
-                .filter(val -> val.equals(true))
-                .collect(Collectors.toList());
+            //endgame clause
+            List<Boolean> helparray = (List<Boolean>) Rounds.getCurrentPlayerCategories().stream()
+                    .filter(val -> val.equals(true))
+                    .collect(Collectors.toList());
 
 
-        if(helparray.size() == 4) {
-            Stage currentStage =  (Stage) firstBox.getScene().getWindow();
-            try{
+            if(helparray.size() == 4) {
+                Stage currentStage =  (Stage) firstBox.getScene().getWindow();
+               try{
 
-                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Scenes/Winner.fxml"));
+                   Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Scenes/Winner.fxml"));
 
-                Scene newScene = new Scene(root);
-                newScene.getStylesheets().add("sample/StyleSheets/styles.css");
+                   Scene newScene = new Scene(root);
+                   newScene.getStylesheets().add("sample/StyleSheets/styles.css");
 
-                currentStage.setScene(newScene);
+                   currentStage.setScene(newScene);
 
-            }catch (Exception err){
-                System.out.println(err);
+               }catch (Exception err){
+                   System.out.println(err);
+               }
             }
-        }
 
 
         Stage currentStage =  (Stage) firstBox.getScene().getWindow();
-        try{
+            try{
+                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Scenes/Rounds.fxml"));
+                Scene newScene = new Scene(root);
+                newScene.getStylesheets().add("sample/StyleSheets/styles.css");
+                currentStage.setScene(newScene);
 
-            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Scenes/Rounds.fxml"));
-            Scene newScene = new Scene(root);
-            newScene.getStylesheets().add("sample/StyleSheets/styles.css");
-
-            currentStage.setScene(newScene);
-
-        }catch (Exception err){
-            System.out.println(err);
-        }
+            }catch (Exception err){
+                    System.out.println(err);
+            }
     }
-
-
 
 
 

@@ -11,13 +11,7 @@
   -fx-background-size: 100%;
 }
 
-#wining{
+#winimage{
   -fx-background-image: url("../Images/tc-banner.jpg");
   -fx-background-size: 100%;
-  -fx-background-repeat: no-repeat;
-}
-
-
-#rest{
-  -fx-background-color: #6cb26a;
 }
