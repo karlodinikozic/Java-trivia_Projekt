@@ -61,9 +61,22 @@ public class Winner {
 
     public void playagain(ActionEvent actionEvent) {
 
-        Stage currentStage =  (Stage) firstBox.getScene().getWindow();
 
-        try{
+        System.exit(0);
+        /*Rounds.setCurrentPlayerPoints(0);
+        Rounds.setIs1Player(true);
+        Player1.setHasScience(false);
+        Player1.setName(null);
+        Player1.setHasSport(false);
+        Player1.setHasGeography(false);
+        Player1.setHasHistory(false);
+        Player2.setHasScience(false);
+        Player2.setName(null);
+        Player2.setHasSport(false);
+        Player2.setHasGeography(false);
+        Player2.setHasHistory(false);*/
+        //Stage currentStage =  (Stage) firstBox.getScene().getWindow();
+       /*try{
             Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/Scenes/sample.fxml"));
             root.getStylesheets().add("sample/StyleSheets/styles.css");
             Scene newScene = new Scene(root);
@@ -72,6 +85,6 @@ public class Winner {
             currentStage.setScene(newScene);
         }catch (Exception err){
             System.out.println(err);
-        }
+        }*/
     }
 }

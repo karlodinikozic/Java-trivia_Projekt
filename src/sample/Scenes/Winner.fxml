@@ -10,65 +10,65 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="firstBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" stylesheets="@../StyleSheets/styles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SceneControlers.Winner">
+<VBox id="wining" fx:id="firstBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" stylesheets="@../StyleSheets/styles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SceneControlers.Winner">
    <children>
       <HBox alignment="CENTER" prefHeight="62.0" prefWidth="900.0" />
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Label text="CONGRATULATIONS!">
+            <Label text="CONGRATULATIONS!" textFill="#6cb26a" textOverrun="CLIP">
                <font>
-                  <Font size="36.0" />
+                  <Font name="Arial Black" size="48.0" />
                </font>
             </Label>
          </children>
       </HBox>
-      <HBox fx:id="winimage" alignment="CENTER" prefHeight="222.0" prefWidth="900.0" stylesheets="@../StyleSheets/styles.css">
+      <HBox fx:id="winimage" alignment="CENTER" prefHeight="266.0" prefWidth="900.0">
          <children>
-            <Label fx:id="winnerName" textFill="WHITE">
+            <Label fx:id="winnerName" text="someone won" textFill="WHITE">
                <font>
                   <Font size="48.0" />
                </font></Label>
          </children>
       </HBox>
-      <VBox prefHeight="307.0" prefWidth="900.0">
+      <VBox id="rest" prefHeight="307.0" prefWidth="900.0">
          <children>
             <GridPane alignment="CENTER" prefHeight="311.0" prefWidth="900.0">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
                <children>
-                  <Label fx:id="p1Points" alignment="CENTER" contentDisplay="CENTER" prefHeight="154.0" prefWidth="449.0" text="points">
+                  <Label fx:id="p1Points" alignment="CENTER" contentDisplay="CENTER" prefHeight="154.0" prefWidth="449.0" text="points" textFill="#6cb26a">
                      <font>
-                        <Font size="48.0" />
+                        <Font name="System Bold" size="48.0" />
                      </font>
                   </Label>
-                  <Label fx:id="p2Points" alignment="CENTER" prefHeight="158.0" prefWidth="451.0" text="points" GridPane.columnIndex="1">
+                  <Label fx:id="p2Points" alignment="CENTER" prefHeight="158.0" prefWidth="451.0" text="points" textFill="#6cb26a" GridPane.columnIndex="1">
                      <font>
-                        <Font size="48.0" />
+                        <Font name="System Bold" size="48.0" />
                      </font>
                   </Label>
-                  <Label fx:id="p1Name" alignment="CENTER" prefHeight="150.0" prefWidth="450.0" text="points" GridPane.rowIndex="1">
+                  <Label fx:id="p1Name" alignment="CENTER" prefHeight="150.0" prefWidth="450.0" text="points" textFill="#6cb26a" GridPane.rowIndex="1">
                      <font>
-                        <Font size="48.0" />
+                        <Font name="System Bold" size="48.0" />
                      </font>
                   </Label>
-                  <Label fx:id="p2Name" alignment="CENTER" prefHeight="158.0" prefWidth="448.0" text="points" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <Label fx:id="p2Name" alignment="CENTER" prefHeight="158.0" prefWidth="448.0" text="points" textFill="#6cb26a" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <font>
-                        <Font size="48.0" />
+                        <Font name="System Bold" size="48.0" />
                      </font>
                   </Label>
                </children>
             </GridPane>
          </children>
       </VBox>
-      <HBox alignment="CENTER" prefHeight="62.0" prefWidth="900.0">
+      <HBox id="rest" alignment="CENTER" prefHeight="62.0" prefWidth="900.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#playagain" prefHeight="60.0" prefWidth="200.0" text="Play Again">
+            <Button mnemonicParsing="false" onAction="#playagain" prefHeight="60.0" prefWidth="200.0" text="Exit">
                <font>
                   <Font size="24.0" />
                </font>
