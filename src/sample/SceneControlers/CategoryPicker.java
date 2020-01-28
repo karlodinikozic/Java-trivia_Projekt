@@ -32,7 +32,6 @@ public class CategoryPicker {
 
         ArrayList<Boolean> category = Rounds.getCurrentPlayerCategories();
 
-        category.forEach(System.out::println);
 
         GeoBtn.setDisable(category.get(0));
         SciBtn.setDisable(category.get(1));

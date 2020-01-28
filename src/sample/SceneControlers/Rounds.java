@@ -96,7 +96,7 @@ public class Rounds {
     private void whichCategory(int angle){
 
         int categoryAngle =  (int)(angle % 360);
-        System.out.println("angle is = " + angle);
+        //System.out.println("angle is = " + angle);
         if(categoryAngle<=57 || categoryAngle>345){
             NewQuestion("Crown");
         }
@@ -129,7 +129,7 @@ public class Rounds {
 
        }
 
-        System.out.println(category);
+        //System.out.println(category);
 
 
         if(category.equalsIgnoreCase("Crown")){
@@ -170,7 +170,7 @@ public class Rounds {
        );
        sample.GameInfo.Rounds.setIsCrownQuestion(false);
        String helpstr = "Round "+sample.GameInfo.Rounds.getCurrentRound()+"";
-       System.out.println(helpstr);
+
        RoundCounter.setText(helpstr);
 
         //Init categories and names
@@ -213,7 +213,7 @@ public class Rounds {
        }
 
         if(sample.GameInfo.Rounds.getIs1Player()){
-            System.out.println("player has =" +sample.GameInfo.Rounds.getCurrentPlayerPoints());
+           // System.out.println("player has =" +sample.GameInfo.Rounds.getCurrentPlayerPoints());
             cPP.setText(Player1.getName() + " has "
                     + sample.GameInfo.Rounds.getCurrentPlayerPoints() + " /4 points");
         }
@@ -243,7 +243,7 @@ public class Rounds {
 
 
     public void onSpin(ActionEvent actionEvent) {
-        System.out.println("Hey");
+
         wheel.setRotate(0);
 
         angle = + ThreadLocalRandom.current().nextInt(5, 360+1);

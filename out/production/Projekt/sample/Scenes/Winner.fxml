@@ -42,24 +42,24 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <Label fx:id="p1Points" alignment="CENTER" contentDisplay="CENTER" prefHeight="154.0" prefWidth="449.0" text="points">
+                  <Label fx:id="p1Points" alignment="CENTER" contentDisplay="CENTER" prefHeight="154.0" prefWidth="449.0" text="points" textFill="#6cb26a">
                      <font>
-                        <Font size="48.0" />
+                        <Font name="System Bold" size="48.0" />
                      </font>
                   </Label>
-                  <Label fx:id="p2Points" alignment="CENTER" prefHeight="158.0" prefWidth="451.0" text="points" GridPane.columnIndex="1">
+                  <Label fx:id="p2Points" alignment="CENTER" prefHeight="158.0" prefWidth="451.0" text="points" textFill="#6cb26a" GridPane.columnIndex="1">
                      <font>
-                        <Font size="48.0" />
+                        <Font name="System Bold" size="48.0" />
                      </font>
                   </Label>
-                  <Label fx:id="p1Name" alignment="CENTER" prefHeight="150.0" prefWidth="450.0" text="points" GridPane.rowIndex="1">
+                  <Label fx:id="p1Name" alignment="CENTER" prefHeight="150.0" prefWidth="450.0" text="points" textFill="#6cb26a" GridPane.rowIndex="1">
                      <font>
-                        <Font size="48.0" />
+                        <Font name="System Bold" size="48.0" />
                      </font>
                   </Label>
-                  <Label fx:id="p2Name" alignment="CENTER" prefHeight="158.0" prefWidth="448.0" text="points" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <Label fx:id="p2Name" alignment="CENTER" prefHeight="158.0" prefWidth="448.0" text="points" textFill="#6cb26a" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <font>
-                        <Font size="48.0" />
+                        <Font name="System Bold" size="48.0" />
                      </font>
                   </Label>
                </children>
@@ -68,7 +68,7 @@
       </VBox>
       <HBox id="rest" alignment="CENTER" prefHeight="62.0" prefWidth="900.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#playagain" prefHeight="60.0" prefWidth="200.0" text="Play Again">
+            <Button mnemonicParsing="false" onAction="#playagain" prefHeight="60.0" prefWidth="200.0" text="Exit">
                <font>
                   <Font size="24.0" />
                </font>
